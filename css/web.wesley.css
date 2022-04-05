@@ -6,7 +6,14 @@ body{
     font-family: 'Lexend Zetta', sans-serif;
     color: #1c1c1c;
 }
-
+body::-webkit-scrollbar{
+    width: 10px;
+    border: 1px solid #1c1c1c;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #1c1c1c;
+    border-radius: 25px;
+}
 h1, h2, h3{
     font-family: 'Lexend Zetta', sans-serif;
     color: #020202;
@@ -20,6 +27,17 @@ h1, h2, h3{
     border-radius: 3px;
     border-width: 1px;
     border-color: #FFFFFF;
+    transition: .5s;
+}
+.botao:hover{
+    box-shadow: 1px 1px 30px white, -1px -1px 30px white, 0px 0px 30px white;
+    text-shadow: 1px 1px 10px white;
+}
+html{
+    scroll-behavior: smooth;
+}
+:target{
+    scroll-margin-top: .8em;
 }
 /*Navegação*/
 nav{
@@ -27,6 +45,10 @@ nav{
     flex-direction: column;
     align-items: center;
     background-color: rgba(5, 5, 5, 95%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
 nav > a{
     text-decoration: none;
@@ -53,6 +75,11 @@ nav ul li a{
     width: 100%;
     text-decoration: none;
     color: #FFFFFF;
+    font-weight: bolder;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+    color: rgb(66, 123, 177);
 }
 /*Cabeçalho*/
 header{
@@ -60,9 +87,10 @@ header{
     flex-direction: column;
     align-items: center;
     background-image: url("../img/cp1.jpg");
+    background-position: center bottom;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
     color: #FFFFFF;
     text-align: center;
     padding: 20px;
@@ -96,8 +124,7 @@ header p{
 }
 /*serviços*/
 #serviços {
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
     align-items: center;
     padding: 30px;
 }
@@ -107,6 +134,9 @@ header p{
     align-items: center;
     text-align: center;
     margin-top: 30px;
+}
+#serviços h2{
+    margin-bottom: 25px;
 }
 /*projetos*/
 #projetos {
