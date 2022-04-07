@@ -85,7 +85,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../img/cp1.jpg");
+    background-image: url("img/cp1.jpg");
     background-position: center bottom;
     background-attachment: fixed;
     background-size: cover;
