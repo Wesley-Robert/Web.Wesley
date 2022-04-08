@@ -1,14 +1,13 @@
 <?php
 
-    if(isset($_POST['submit'])){
-        include_once('../Dados/conexao.php'); 
-
-        $name = $_POST['nome'];
-        $pass = $_POST['senha'];
-
-        $submitt = mysqli_query($mysql, "INSERT INTO `clientes`(`nome`, `senha`) VALUES ('$name', '$pass')");
-        
-    }
+//    if(isset($_POST['submit'])){
+//        include_once('../Dados/conexao.php'); 
+//
+//        $name = $_POST['nome'];
+//        $pass = $_POST['senha'];
+//
+//        $submitt = mysqli_query($mysql, "INSERT INTO `clientes`(`nome`, `senha`) VALUES ('$name', '$pass')");
+//  }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
