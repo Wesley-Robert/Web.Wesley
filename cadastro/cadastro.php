@@ -1,11 +1,12 @@
-<?php 
+<?php
+
     if(isset($_POST['submit'])){
-        include_once('./Dados/conexao.php'); 
+        include_once('../Dados/conexao.php'); 
 
         $name = $_POST['nome'];
         $pass = $_POST['senha'];
 
-        $grava = mysqli_query($mysql, "INSERT INTO clientes(nome, senha) VALUES ($name, $pass)");
+        $submitt = mysqli_query($mysql, "INSERT INTO `clientes`(`nome`, `senha`) VALUES ('$name', '$pass')");
         
     }
 ?>
