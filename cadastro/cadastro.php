@@ -1,3 +1,14 @@
+<?php 
+    if(isset($_POST['submit'])){
+        include_once('./Dados/conexao.php'); 
+
+        $name = $_POST['nome'];
+        $pass = $_POST['senha'];
+
+        $grava = mysqli_query($mysql, "INSERT INTO clientes(nome, senha) VALUES ($name, $pass)");
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,21 +28,21 @@
 <body>
     <div class="login-box">
         <h2>Login</h2>
-        <form>
+        <form action="cadastro.php" method="POST">
             <div class="user-box">
-                <input type="text" name="" required="">
-                <label>Usuário</label>
+                <input type="text" name="nome" required="">
+                <label for="user">Usuário</label>
             </div>
             <div class="user-box">
-                <input type="password" name="" required="">
-                <label>Senha</label>
+                <input type="password" name="senha" required="">
+                <label for="password">Senha</label>
             </div>
             <a href="#">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-                ENTER
+                <button type="submit" id="btn-cad" name="submit">ENTRAR</button>
             </a>
         </form>
     </div>
